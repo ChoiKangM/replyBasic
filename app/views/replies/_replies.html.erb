@@ -1,0 +1,12 @@
+<h3>전체 댓글</h3>
+<!-- memos 컨트롤러의 show 액션에서 모든 댓글을 보여줍니다 -->
+<!-- Ajax로 ul 태그에 li를 넣습니다. -->
+<ul id="replies">
+    <% @replies.each do |reply| %>
+        <!-- 댓글 각각을 보여줍니다 -->
+        <li><%= reply.content %></li>
+        <!-- 댓글 삭제 -->
+        <a href="/memos/<%=@memo.id%>/replies/<%=reply.id%>">삭제</a> <br>
+    <% end %>
+    <!-- Ajax로 추가한 li가 들어갑니다-->
+</ul>   

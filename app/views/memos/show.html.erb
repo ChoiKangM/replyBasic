@@ -1,0 +1,13 @@
+<!-- 글의 제목과 내용을 보여줍니다 -->
+<h1>제목 : <%= @memo.title %></h1>
+<p>내용 : <%= @memo.content %></p>
+<!-- 수정페이지로 갑니다 -->
+<a href="/memos/<%=@memo.id%>/edit">수정하기</a>
+<!-- 글을 삭제합니다 -->
+<a href="/memos/<%=@memo.id%>/destroy"data-confirm="정말로 삭제합니까?">삭제하기</a>
+<!-- 목록으로 돌아갑니다 -->
+<a href="/memos/index">목록으로</a>
+
+<br><br>
+<%= render 'replies/replies'%>
+<%= render 'replies/new_reply'%>

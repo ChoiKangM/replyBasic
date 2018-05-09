@@ -1,0 +1,7 @@
+// @reply를 저장한 이후 
+(function($){
+    // 입력폼을 비웁니다. 
+    $("#reply_content").val("")
+    // ul#replies 끝에 새로운 댓글인 li 태그를 붙입니다.
+    $("#replies").append("<li><%= @reply.content %></li>");
+})(jQuery)

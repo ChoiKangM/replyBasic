@@ -1,0 +1,10 @@
+<!-- /memos/new는 routes.rb에서 설정했습니다 -->
+<a href="/memos/new">글쓰기</a> <br>
+<!-- 모든 메모들을 불러와 하나씩 보여줍니다 -->
+<% @memos.each do |m| %>
+    <!-- 제목을 누르면 해당 글로 이동합니다 -->
+    <h1>제목 : <a href="/memos/<%= m.id %>/show"><%= m.title %></a></h1>
+    <br>
+    <h4>내용 : <%= m.content %></h4>
+    <hr>
+<% end %>

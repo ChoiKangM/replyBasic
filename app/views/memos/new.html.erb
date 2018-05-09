@@ -1,0 +1,15 @@
+<h1>새글 쓰기</h1>
+<!-- 현재 new 액션은 글을 직접 쓰는 곳이고 -->
+<!-- 글 내용은 create 액션으로 보내어 Memo 모델로 저장합니다. -->
+<form action="/memos/create">
+  <!-- 글을 쓸 때 해킹을 예방할 토큰을 함께 보냅니다  -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  제목 <br>
+  <input type="text" name="title" placeholder="제목을 입력하세요">
+  <br>
+  내용 <br>
+  <textarea name="content" cols="30" rows="10" placeholder="내용을 입력하세요"></textarea>
+  <br>
+  <!-- form 태그를 submit 타입으로 제출해야 글이 써집니다. -->
+  <input type="submit" value="글쓰기">
+</form> 

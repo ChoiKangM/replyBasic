@@ -1,0 +1,13 @@
+<h1>수정하기</h1>
+<form action="/memos/<%= @memo.id%>/update">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  제목 <br>
+  <!-- input 태그 속성 value="<%= @memo.title%>"로 써둔 제목을 불러옵니다.-->
+  <input type="text" name="title" value="<%= @memo.title%>">
+  <br>
+  내용 <br>
+  <!--textarea 내용에 <%=@memo.content%>로 써둔 내용을 불러옵니다. -->
+  <textarea name="content" cols="30" rows="10"><%=@memo.content%></textarea>
+  <br>
+  <input type="submit" value="글쓰기">
+</form> 

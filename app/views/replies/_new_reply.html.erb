@@ -1,0 +1,11 @@
+<!-- memos 컨트롤러의 show 액션에서 새로운 댓글을 작성합니다 -->
+<form action="/memos/<%=@memo.id%>/replies" data-remote="true">
+  <!-- 글을 쓸 때 해킹을 예방할 토큰을 함께 보냅니다  -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  댓글:<br>
+  <!-- 댓글이 속한 memo의 id를 숨겨서 보냅니다 -->
+  <input type="hidden" value="<%= @memo.id%>" name="memo_id">
+  <input type="text" name="reply_content" placeholder="댓글을 입력하세요"><br>
+  <!-- form 태그를 submit 타입으로 제출해야 글이 써집니다. -->
+  <input type="submit" value="댓글쓰기">
+</form> 
