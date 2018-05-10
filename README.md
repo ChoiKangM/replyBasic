@@ -114,7 +114,7 @@ rails g controller Replies
 ```
 > 레일즈야 만들자 컨트롤러 이름은 Replies야  
 
-## `memos_controller.rb` 액션 로직
+#### `memos_controller.rb`
 ```ruby
 class MemosController < ApplicationController
   # CREATE
@@ -162,7 +162,7 @@ class MemosController < ApplicationController
 end
 
 ```
-## `replies_controller.rb` 액션 로직
+#### `replies_controller.rb`
 ```ruby
 class RepliesController < ApplicationController
     def create  # 쓴 댓글 저장하기
@@ -179,7 +179,7 @@ class RepliesController < ApplicationController
     end
 end
 ```
-## `routes.rb`
+#### `routes.rb`
 ```ruby
 Rails.application.routes.draw do
   root 'memos#index'
@@ -204,7 +204,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 ```
-## `memos/new.html.erb`
+#### `memos/new.html.erb`
 ```erb
 <h1>새글 쓰기</h1>
 <!-- 현재 new 액션은 글을 직접 쓰는 곳이고 -->
@@ -222,7 +222,7 @@ end
   <input type="submit" value="글쓰기">
 </form> 
 ```
-## `memos/index.html.erb`
+#### `memos/index.html.erb`
 ```erb
 <!-- /memos/new는 routes.rb에서 설정했습니다 -->
 <a href="/memos/new">글쓰기</a> <br>
@@ -235,7 +235,7 @@ end
     <hr>
 <% end %>
 ```
-## `memos/show.html.erb`
+#### `memos/show.html.erb`
 ```erb
 <!-- 글의 제목과 내용을 보여줍니다 -->
 <h1>제목 : <%= @memo.title %></h1>
@@ -251,7 +251,7 @@ end
 <%= render 'replies/replies'%>
 <%= render 'replies/reply'%>
 ```
-## `memos/edit.html.erb`
+#### `memos/edit.html.erb`
 ```erb
 <h1>수정하기</h1>
 <form action="/memos/<%= @memo.id%>/update">
@@ -268,7 +268,7 @@ end
 </form> 
 ```
 
-## `replies/_new_reply.html.erb`
+#### `replies/_new_reply.html.erb`
 ```erb
 <!-- memos 컨트롤러의 show 액션에서 새로운 댓글을 작성합니다 -->
 <form action="/memos/<%=@memo.id%>/replies">
@@ -282,7 +282,7 @@ end
   <input type="submit" value="댓글쓰기">
 </form> 
 ```
-## `replies/_replies.html.erb`
+#### `replies/_replies.html.erb`
 ```erb
 <h3>전체 댓글</h3>
 <!-- memos 컨트롤러의 show 액션에서 모든 댓글을 보여줍니다 -->
@@ -299,7 +299,7 @@ end
 여기까지 레일즈를 이용해 댓글 기능을 구현해봤습니다.  
 이제 Ajax를 사용해 봅니다.  
 
-Ajax란?  
+## `Ajax`란?  
 위키피디아 검색결과
 > Ajax(Asynchronous JavaScript and XML)는 비동기적인 웹 애플리케이션의 제작을 위해 아래와 같은 조합을 이용하는 웹 개발 기법이다.  
 > 표현 정보를 위한 HTML (또는 XHTML) 과 CSS  
