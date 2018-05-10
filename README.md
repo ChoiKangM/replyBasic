@@ -9,11 +9,11 @@
 ## 레일즈 프로젝트 생성하기
 레일즈 프로젝트를 만듭니다.
 ```bash
-$ rail new commentBasic
+$ rail new replyBasic
 ```
 생성된 Rails 프로젝트 폴더로 이동합니다.
 ```bash
-$ cd commentBasic
+$ cd replyBasic
 ```
 
 ## model 만들기
