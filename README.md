@@ -25,12 +25,18 @@ $ rails g model Memo title:string content:text
 > 게시글의 Column(속성)으로 title(제목)은 string으로 content(내용)는 text로 만들어   
 
 위의 명령어로 만든 구조입니다.  
+  
+
 | Model(모델 이름) | Column(속성) |
 |:----------------:|--------------|
 |       `Memo`     | `title`:string |
 |                  | `content`:text |
 
+
+
 하지만 실제로 만들어지는 구조는 아래의 형태입니다.  
+
+
 | Model(모델 이름) | Column(속성)          |
 |:----------------:|-----------------------|
 |      `Memo`      | `title`:string        |
@@ -46,13 +52,19 @@ $ rails g model Reply content:text memo:belongs_to
 > 레일즈야 만들자 모델 이름은 Reply(댓글)야  
 > 게시글의 Column(속성)으로 title(제목)은 string으로 content(내용)는 text로 만들어   
 
-위의 명령어로 만든 구조입니다.  
+위의 명령어로 만든 구조입니다.   
+
+
 | Model(모델 이름) | Column(속성)            |
 |:----------------:|--------------------- |
 |      `Reply`     | `content`:text       |
 |                  | `memo`:belongs_to    |
 
-하지만 실제로 만들어지는 구조는 아래의 형태입니다.  
+
+
+하지만 실제로 만들어지는 구조는 아래의 형태입니다. 
+
+
 | Model(모델 이름) | Column(속성)          |
 |:----------------:|-----------------------|
 |      `Reply`     | `content`:text        |
@@ -60,6 +72,8 @@ $ rails g model Reply content:text memo:belongs_to
 |                  | `id`:integer          |
 |                  | `created_at`:datetime |
 |                  | `updated_at`:datetime |
+
+
 
 데이터베이스 만들기  
 ```bash
