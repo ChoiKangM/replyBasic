@@ -104,13 +104,13 @@ end
 ## controller 만들기
 
 ```bash
-rails g controller Memos new index show edit
+$ rails g controller Memos new index show edit
 ```
 > 레일즈야 만들자 컨트롤러 이름은 Memos야  
 > 안에 액션으로 new, edit, index, show를 만들어
 
 ```bash
-rails g controller Replies
+$ rails g controller Replies
 ```
 > 레일즈야 만들자 컨트롤러 이름은 Replies야  
 
